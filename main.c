@@ -7,6 +7,8 @@
 #include "enemy2.c"
 #include "gamemanager.c"
 
+void printStars();
+
 void main()
 {
     poke(0x24e, 1);

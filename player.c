@@ -69,7 +69,7 @@ void playerBullet()
     elementDst = POS((*currentObject).x, (*currentObject).y);
     printElementA();
 
-    (*currentObject).y -= 6;
+    (*currentObject).y -= 8;
 
     if ((*currentObject).y < 10)
     {
@@ -89,7 +89,7 @@ void playerBullet()
             objects[i].exit = 1;
             (*currentObject).active = 0;
             --playerBulletsCount;
-            addObject(0, explosion, (*currentObject).x, (*currentObject).y, "\000\000\000\000");
+            addObject(0, explosion, objects[i].x, objects[i].y);
             return;
         }
     }

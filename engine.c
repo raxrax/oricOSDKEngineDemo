@@ -5,13 +5,13 @@
 
 void initObjects(void);
 void wait(int time);
-void addObject(char type, void *func, unsigned char x, unsigned char y, char *data);
+void addObject(char type, void *func, unsigned char x, unsigned char y);
 void objectProcessing(void);
 void engine(void);
-void replaceObjectByID(unsigned char id, char type, void *func, unsigned char x, unsigned char y, char *data);
+void replaceObjectByID(unsigned char id, char type, void *func, unsigned char x, unsigned char y);
 void systemDelay(void);
 
-#define DEBUG_MODE
+// #define DEBUG_MODE
 
 #define KEY_STOPENGINE '!'
 
@@ -71,7 +71,6 @@ void wait(int time)
 
 void addObject(char type, void *func, unsigned char x, unsigned char y)
 {
-
     for (i = 0; i < OBJECTS_MAX; ++i)
     {
         if (!objects[i].active)
